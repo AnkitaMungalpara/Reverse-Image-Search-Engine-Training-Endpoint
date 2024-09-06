@@ -10,11 +10,11 @@ sudo ./aws/install
 
 ## Add Paperspace machine as runner
 mkdir actions-runner && cd actions-runner
-curl -o actions-runner-linux-x64-2.299.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.299.1/actions-runner-linux-x64-2.299.1.tar.gz
-echo "147c14700c6cb997421b9a239c012197f11ea9854cd901ee88ead6fe73a72c74  actions-runner-linux-x64-2.299.1.tar.gz" | shasum -a 256 -c
-tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
+curl -o actions-runner-linux-x64-2.319.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.319.1/actions-runner-linux-x64-2.319.1.tar.gz
+echo "3f6efb7488a183e291fc2c62876e14c9ee732864173734facc85a1bfb1744464  actions-runner-linux-x64-2.319.1.tar.gz" | shasum -a 256 -c
+tar xzf ./actions-runner-linux-x64-2.319.1.tar.gz
 
-./config.sh --url <url> --token <token>
+./config.sh --url <github-url> --token <token>
 
 ## Add Runner as a service
 sudo ./svc.sh install
